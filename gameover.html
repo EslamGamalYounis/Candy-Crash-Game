@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gameOver</title>
+    <style>
+        .mainwrapper {
+            background-size: cover;
+            min-height: 100vh;
+            min-width: 100vw;
+            background-image: url("bgimages/video-game-candy-crush-soda-saga-wallpaper-preview.jpg");
+            background-size: cover;
+            position: absolute;
+        }
+        
+        .overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: #171616b3;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .overlay h1 {
+            text-shadow: 2px 2px 2px #439c94;
+            color: coral;
+            margin-top: 8%;
+            margin-top: 3%;
+            font-size: 100px;
+        }
+        
+        .overlay p {
+            text-shadow: 2px 2px 2px darkviolet;
+            font-size: 60px;
+            color: burlywood;
+        }
+        
+        .overlay button {
+            padding: 10px;
+            background: none;
+            border: 2px solid aqua;
+            border-radius: 11px;
+            color: darkgray;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mainwrapper">
+        <audio id='MyAudio' loop='true'>
+            <source src="audio/Candy Crush Loop5.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+         </audio>
+        <div class="overlay">
+            <h1>Game over</h1>
+            <p>you move all movment</p>
+            <button onclick="playAgain()">play again</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    var Aud = document.getElementById('MyAudio');
+    Aud.play();
+
+    function playAgain() {
+        location.replace("index.html")
+    }
+</script>
+
+</html>

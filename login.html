@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/login.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <audio id='MyAudio' loop='true'>
+        <source src="audio/Candy Crush Loop5.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+     </audio>
+    <div class="shade">
+        <div class="blackboard">
+            <form id="login-form" class="form">
+                <p>
+                    <label>Name: </label>
+                    <input id="name2" type="text" placeholder="Username" value="" required>
+                </p>
+
+                <p class="wipeout">
+                    <input id="login_btn" type="button" value="Play" class="btn-9">
+                </p>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var Aud = document.getElementById('MyAudio');
+        Aud.play();
+        var arr = new Array();
+        $(document).ready(function() {
+            $("#login_btn").click(function() {
+                var enteredName = $("#name2").val();
+
+                var storedName = localStorage.getItem("name" + enteredName);
+                var storedScore = localStorage.getItem("score" + enteredName);
+                var storedLevel = localStorage.getItem("level" + enteredName);
+
+
+                if (enteredName == storedName) {
+
+                    // alert("You are logged in!" + storedName + storedScore + storedLevel);
+                    localStorage.setItem("loginName", enteredName);
+                    console.log(storedLevel)
+                    localStorage.setItem("loginScore", storedScore);
+                    localStorage.setItem("loginLevel", storedLevel);
+                    window.location.replace("index.html");
+                } else {
+
+                    alert("User not found");
+                }
+
+            });
+
+        });
+    </script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>

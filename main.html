@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Candy Crush</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="app.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <audio id='MyAudio' loop='true'>
+        <source src="audio/Candy Crush Loop5.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+     </audio>
+    <div class="container divv">
+        <div class="row align-items-center">
+
+            <div class="col-5 div3">
+                <div class="frame ">
+
+                    <!-- <button class="custom-btn btn-9 button4" id "b1">New Player</button>!-->
+                    <button class="custom-btn btn-6 button4" onclick="signup()"><span>New Player  </span></button>
+                    <button class="custom-btn btn-9 button4" onclick="login()"><span>Play 
+       </span></button>
+                    <button class="custom-btn btn-8 button4" onclick="score()"><span> High Score 
+       </span></button>
+
+
+                </div>
+            </div>
+            <div class="col ball">
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var Aud = document.getElementById('MyAudio');
+        Aud.play();
+
+        function signup() {
+            location.replace("signup.html")
+        }
+
+        function login() {
+            location.replace("login.html")
+        }
+
+        function score() {
+            location.replace("score.html")
+        }
+    </script>
+
+    <script src="index.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
